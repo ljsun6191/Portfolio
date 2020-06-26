@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+/* Reset CSS */
+* { 
+    margin:0;  padding:0; 
+    font: 'Noto Sans KR', sans-serif; color: #010101; 
+    box-sizing: border-box;
+}
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#303b42;}
+img { border:0;}
+body {
+    background-color: #273233;
+}
+
+
+/* header */
+.header {
+    width: 100%; height: 55px; 
+    background-color: #e59183;
+    position: sticky; top: 0;
+    z-index: 999;
+}
+.header ul {
+    position: absolute; left: 50%;
+    transform: translateX(-50%); 
+}
+.header ul li {
+    float: left; 
+    font-size: 26px; line-height: 55px;
+    margin: 0 44px;
+}
+.header ul li a {
+    color: #fff;
+}
+.header ul li a:hover {
+    text-shadow: 1px 1px 3px #fff;
+}
+
+/* container */
+.container {
+    width: 100%;
+}
+.content1 {
+    width: 100%; height: auto;
+    position: relative;    
+}
+.content1 video.visualVideo {
+    width: 100%;
+}
+.content1 h1 {
+    position: absolute; top: 40%; left: 50%;
+    transform: translate(-50%);
+    font-size: 68px; color: #fff; text-shadow: 2px 2px 2px #010101;
+}
+.content1 h2 {
+    position: absolute; top: 53%; left: 50%;
+    transform: translate(-50%);
+    font-size: 30px; color: #fff; text-shadow: 2px 2px 2px #010101;
+}
+.content2 {
+    width: 100%; height: 800px;
+    padding: 50px 430px;
+}
+.content2> h2 {
+    font-size: 62px;
+    color: #e59183;
+    padding-bottom: 25px;
+}
+.content2 .profileIMG {
+    width: 100%; 
+}
+.content2 .profileIMG img {
+    width: 236px; height: 315px;
+    float: left;
+    border: 3px solid #e59183;
+}
+.content2 .profile {
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
+}
+.content2 .profile div {
+    float: left; padding-right: 25px;
+}
+.content2 .profile h2 {
+    padding: 20px 0 10px 0;
+    color: #e59183;
+}
+.content2 .profile h2:nth-of-type(2) {
+    padding-top: 90px;
+}
+.content2 .profile p {
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+.content2 .profile p.company {
+    font-weight: bold;
+}
+.content3 {
+    width: 100%; height: 720px;
+    padding: 50px 430px;
+}
+.content3 h2 {
+    font-size: 62px;
+    color: #e59183;
+}
+.content3 img {
+    width: 400px;
+}
+.content3 p {
+    float: left; padding: 30px;
+    font-size: 20px;
+    color: #fff;
+}
+.content4 {
+    width: 100%; height: 2000px;
+    padding: 50px 430px;
+}
+.content4 .pinkBox {
+    width: 100%; height: 25px;
+    background-color: #e59183;
+}
+.content4 h2 {
+    font-size: 62px;
+    color: #e59183;
+    padding-bottom: 25px;
+}
+.content4 .con4 {
+    float: left;
+    width: 400px;
+    margin-right: 23px;
+    position: relative;
+}
+.content4 img {
+    width: 400px;
+    float: left;
+    margin: 0 auto;
+}
+.content4 img:hover {
+    /* default */
+    transform:scale(0.97); 
+    /* 크롬 */
+    -webkit-transform:scale(0.97); 
+    /* FireFox */
+    -moz-transform:scale(0.97); 
+    /* Opera */
+    -o-transform:scale(0.97); 
+    opacity: 0.8;
+}
+.content4 img:hover .content4 .con4 a p.hoverTxt {
+    display: block;
+    opacity: 1;
+}
+.content4 .con4 a p.hoverTxt {
+    position: absolute; top: 20%; left: 50%; 
+    transform: translateX(-50%); 
+    color: #fff;
+    background-color: #232323;
+    width: 200px; height: 70px;
+    text-align: center; line-height: 70px;
+    display: none;
+}
+.content4 p.txt {
+    float: left;
+    background-color: #fff;
+    padding: 20px;
+    font-size: 14px;
+}
+.content4 button {
+    width: 400px; height: 40px;
+    border-style: none;
+    background-color: yellowgreen;
+    margin-bottom: 35px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+}
+.content4 button:hover {
+    background-color: dimgray;
+}
+.content4 p.ment {
+    padding-top: 30px;
+    font-size: 20px;
+    float: left;
+    color: #fff;
+    width: 100%;
+}
+
+/* footer */
+.footer {
+    position: relative; bottom: 0;
+    width: 100%; height: 140px;
+    background-color: #e59183;
+    padding: 50px 430px;
+}
+.footer .contact1, .footer .contact2 {
+    float: left;
+    padding-right: 50px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    width: 400px;
+}

@@ -1,0 +1,149 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/*    Reset CSS  */
+* { margin:0;  padding:0; }
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#bbb;}
+img { border:0;}
+body{overflow-x:hidden;font-family: 'Nanum Gothic', sans-serif; overflow-x:hidden;}
+
+@media(min-width:1001px){
+	
+	#header{width:1200px; height:150px; margin:0 auto; position:relative; }
+	#visual{width:100%; height:700px; background:url(../img/bgbg.png) no-repeat center; }
+	
+	#contents{}
+	
+	.logo{width:100px; height:100px; position:absolute; left:550px; top:22px; }
+	#header li{float:left;}
+	.loginbox{float:right; margin-top:20px;}
+	.header_ul_1{float:left; margin-top:64px;}
+	.header_ul_2{float:right;
+	margin-top:21px;}
+	.menu1{padding-right:70px;}
+	.menu2{padding:0 70px;}
+	.menu6{padding-left:70px;}
+	
+	.log1{padding-right:13px;}
+	.log2{padding:0 13px;}
+	.log3{padding-left:13px;}
+	
+	.vi_logobox{width:1200px; margin:0 auto;}
+	.vi_logo1{margin:50px auto; display:block;}
+	.vi_logo2{display:block; margin:20px auto;} 
+	
+	
+	
+	
+	/* 컨텐츠 ul박스 1번 시작*/
+	.con_boxwrap1{width:1200px; height:900px; margin:100px auto; background:lightgray; position:relative; text-align:center;}
+	.con_boxwrap1 h2, .con_boxwrap1 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	p{position:absolute;}
+	.con_boxwrap1 h2{left:400px; top:20px; font-size:48px;}
+	.con_boxwrap1 p{left:350px; top:110px; font-size:22px;}
+	
+	#contents .con_boxwrap1 ul{width:1160px; height:696px; background:#222; margin:0 auto; position:absolute; left:20px; bottom:20px;}
+	#contents .con_boxwrap1 li{position:absolute;}
+		
+	.box1_1_li{width:464px; height:464px; }
+	.box1_2_li{width:464px; height:232px; left:464px;}
+	.box1_3_li{width:464px; height:232px; left:464px; top:232px;}
+	.box1_4_li{width:232px; height:464px; right:0px;}
+	.box1_5_li{width:464px; height:232px; bottom:0px;}
+	.box1_6_li{width:464px; height:232px; left:464px; bottom:0px;}
+	.box1_7_li{width:232px; height:232px; right:0px; bottom:0px;}
+	
+	.box1_1_li a{width:454px; height:454px; position:absolute;}
+	.con_boxwrap1 a:hover{background:rgba(255,204,0,0.5); border:5px solid orange;}
+	
+	.box1_2_li a, .box1_3_li a, .box1_5_li a, .box1_6_li a{width:454px; height:222px; position:absolute;}
+	
+	
+	.box1_4_li a{width:222px; height:454px; position:absolute;}
+	.box1_7_li a{width:222px; height:222px; position:absolute;}
+	
+	/* ul박스 1번 끝*/
+	
+	/* 컨텐츠 ul박스 2번 시작*/
+	#contents .con_boxwrap2 ul{width:1200px; height:880px; margin:0 auto; background:lightgray; position:relative;}
+	#contents .con_boxwrap2 li{width:580px; height:280px; position:absolute;}
+	
+	
+	
+	.box2_1_li{background:coral; left:10px; top:10px;}
+	#contents .con_boxwrap2 .box2_2_li{width:580px; height:570px; right:10px; top:10px;}
+		
+	.box2_3_li{left:10px; top:300px; position:relative;}
+	.box2_3_li p, .box2_6_1 p, .box2_6_2 p{color: white; font-size:18px; width:60px; height:30px; left:117px; bottom:50px; text-align:center; line-height:30px; position:absolute; border:2px solid white;}
+	.box2_6_1 p{left:115px;}
+	.box2_6_2 p{left:417px;}
+	.box2_6_2 a, .box2_6_1 a, .box2_3_li a{display:block; color:white;}
+	.box2_6_2 a:hover, .box2_6_1 a:hover, .box2_3_li a:hover{background:white; color:black; font-weight:bold; }
+		
+	
+	.box2_5_li{left:10px; bottom:10px;}
+	.box2_6_li{right:10px; bottom:10px;}
+		.box2_6_1{width:280px; height:280px; float:left;}
+		.box2_6_2{width:280px; height:280px; float:right;}
+	/* ul박스 2번 끝*/
+	
+	/*여행꿀팁 시작*/
+	.con_boxwrap3{width:100%; height:870px; background:url(../img/il_bg.png) no-repeat center; margin-top:100px; overflow:hidden;}
+	.il_box{width:1200px; margin:42px auto 0 auto; text-align:center;}
+	.il_box h2{font:72px "나눔고딕"; color:#50a512; }
+	.il_box p{font:48px "나눔고딕"; color:#4a4b49; margin:30px 0 0 0;}
+	.il_iconbox{width:1200px; margin:40px auto 33px auto; overflow:hidden;}
+	.il_iconbox ul{float:left;}
+	.il_iconbox li{float:left; }
+	.il_iconbox .ic1{margin-right:18px;}
+	.il_iconbox .ic2{margin-left:18px; margin-right:18px;}
+	.il_iconbox .ic3{margin-left:18px;}
+	
+	.list_boxwrap{width:1200px; margin:0 auto;}
+	.list_boxwrap .t{width:340px; height:240px; background:white; border-radius:20px; box-shadow:2px 2px 10px lightgray; float:left; padding:20px;}
+	.list_box2{margin:0 30px;}
+	.list_boxwrap a{color:black;}
+	.list_boxwrap a:hover{text-decoration:underline;}
+	.list_boxwrap li{font:16px "나눔고딕"; margin-bottom:18px; }
+	.list_boxwrap .line{width:340px; border-bottom:2px solid black; margin:20px 0;}
+	.list_boxwrap h2{font:24px "나눔고딕";}
+	
+	/*여행꿀팁 끝*/
+	
+	#footer{width:100%; height:200px; background:url(../img/foo_bg.png); }
+	.foo1{width:1200px; height:50px; margin:0 auto; line-height:50px; }
+	.foo1 a{color:white;}
+	.foo1 li{margin-right:20px; float:left; color:white; font-size:13px;}
+	
+	
+	
+	.foo2{width:1200px; height:120px; margin:0 auto; padding-top:30px; color:#ccc; font-size:14px; position:relative;}
+	.foo2 .foo_p{margin-bottom:10px;}
+	.foo2 p{width:700px; float:left;}
+	.foo_iconbox{width:250px; height:45px; position:absolute; right:0;}
+	.foo_iconbox li{float:left;}
+	.foo_iconbox img{margin-right:10px;}
+	
+}
+
+@media(min-width:321px) and (max-width:1000px){
+	
+}
+
+@media(max-width:320px){
+	
+}
+
+
+
