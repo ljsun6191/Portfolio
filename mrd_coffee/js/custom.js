@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    /*content1- slide visual images*/
+    /* content1- slide visual images */
 	var total=$('.slideWrap .slide').length;
 	var total3 = $('.imageSize .slide3').length;
 	var i = 0;
@@ -7,6 +7,7 @@ $(document).ready(function(){
 	
 	start();
 	
+    /* content1 - slide */
 	function start(){
         timer=setInterval(function(){
             if(i == total - 1){
@@ -28,6 +29,8 @@ $(document).ready(function(){
             $('.imageSize .slide3').eq(j).fadeIn();
         },3000);
     }
+    
+    /* content3 - slide */
     $('.prev').click(function() {
        clearInterval(timer);
 		if(i == total - 1){
@@ -49,51 +52,36 @@ $(document).ready(function(){
         $('.imageSize .slide3').fadeOut();
         $('.imageSize .slide3').eq(i).fadeIn();		
     });
-    /*navWrap change color*/
-//    $(window).scroll(function(){
-//        var conScroll = $(this).scrollTop();
-//
-//        if(wheel > 0) {
-//            //content2로 넘어왔을 때
-//            $('#nav ul li a').css({'color':'black'});
-//            
-//        }else if(wheel > 2000) {
-//            //content3로 넘어왔을 때
-//            $('#nav ul li a').css({'color':'white'});
-//            
-//        }else {
-//            //content3로 넘어왔을 때
-//            $('#nav ul li a').css({'color':'black'});
-//            
-//        }
-//    });
-
-    $('#nav ul li a').on('click', function(event) {
-        $(this).parent().find('a').removeClass('active');
-        $(this).addClass('active');
-    });
-    $(window).on('scroll', function() {
-        $('.content').each(function() {
-            if($(window).scrollTop() >= $(this).offset().top) {
-                var id = $(this).attr('id');
-                $('#nav ul li a').removeClass('active');
-                $('#nav ul li a[href=#'+ id +']').addClass('active');
-            }
-
-        });
-    });
-    /*gnb*/
+    
+    /* nav */
     $('.navWrap ul li.scroll').click(function() {
 		i=$(this).index();
         console.log(i);
-		$('.container').stop().animate({'top':i*-1000+'px'});
-        
+		$('.container').stop().animate({'top':i*-100+'vh'});
+                
 	});
+
+    //nav - copyright 
     $('.navWrap ul li.copyright').click(function() {
 		i=$(this).index();
-		$('.container').stop().animate({'top':i*-1000-180+1000+'px'});
+		$('.container').stop().animate({'top':i*-100-18+100+'vh'});
         
 	});
+    
+    //nav - changing color
+    var btnColor = $('.navWrap ul li.scroll');
+    
+    btnColor.find('a').click(function() {
+        btnColor.removeClass('active');
+        $(this).parent().addClass('active');
+    });
+    
+    
+    
+    
+    
+    
+    
     
     /*scrolling event (full frame page)*/
 //    var aniChk = false; //페이지가 animate중인지 표현하는 변수. true: 애니메이트 중
@@ -136,4 +124,5 @@ $(document).ready(function(){
 //           }
 //       } 
 //    });
+       
 });
