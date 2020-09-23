@@ -1,22 +1,22 @@
 @charset "utf-8";
 
 /*    Reset CSS  */
-* { margin:0;  padding:0;}
+* { margin:0;  padding:0; box-sizing: border-box;}
 ol,ul { list-style: none; }
 a { outline:0; text-decoration:none; color:black;}
 img { border:0;}
 
-html{width:100%; height:100%; overflow:hidden;}
-body{width:100%; height:100%; background:url(../img/bg.png) no-repeat; background-size: 100% 100%; position:relative;}
+html{width:100vw; height:100vh; overflow:hidden;}
+body{width:100vw; height:100vh; background:url(../img/bg.png) no-repeat; background-size: 100% 100%; position:relative; }
 
 /*HOME*/
-h1{
+h1.home{
     width:300px; height:43px;
     margin-top:30px; margin-left:30px;
 }
 .art{
-    position:absolute; /*left:645px;*/ top:10px;
-    left: 50%; transform: translateX(-50%);
+    position:absolute; top:10px; left: 50%; transform: translateX(-50%);
+    width: 
 }
 .btnWrap {
     width: 610px;
@@ -50,7 +50,8 @@ h1{
     position: absolute; top: 130px; left: 50%; transform: translateX(-50%);
     font-size: 38px;
 }
-.introduceBox{
+.introduceBox {
+    position: relative;
     width:100%; height:500px; background:white; position:absolute; top:50%; margin-top:-250px;
 
 }
@@ -61,11 +62,20 @@ p.todd_selby{
     padding-left: 30px; padding-top: 100px;
 }
 .about_selby{width:800px; float:left; margin-left:30px; margin-top:30px;}
-img.exit1 {
+/*img.exit1 {
     width:30px; height:32px;
     background-color: #010101;
     position: absolute; bottom: 130px; left: 50%; 
     transform: translateX(-50%);
+    cursor: pointer;
+}*/
+.introduceBox div p.exit1 {
+    position:absolute; bottom: 70px; right: 220px;
+    width:50px; height:30px; 
+    background-color: #010101; border-radius: 10px;
+    text-align: center; line-height: 30px;
+    color: #fff;
+    display: none;
     cursor: pointer;
 }
 
@@ -74,7 +84,7 @@ img.exit1 {
     display: none;
 }
 .videoWrap h1 {
-    position: absolute; top: 100px; left: 50%; transform: translateX(-50%);
+    position: absolute; top: 90px; left: 50%; transform: translateX(-50%);
     font-size: 30px;
 }
 .video{width:1100px; height:600px; position:absolute; left:50%; margin-left:-550px; top:50%; margin-top:-300px;}
@@ -82,17 +92,117 @@ img.exit1 {
 .right{width:3px; height:0; background:#010101; position:absolute; top:0px; right:0px;}
 .bottom{width:0; height:3px; background:#010101; position:absolute; right:0px; bottom:0px;}
 .left{width:3px; height:0; background:#010101; position:absolute; bottom:0px; left:0px;}
-.full{
-    position:relative; width:1094px; height:594px; display:none; 
+.full {
+    position:relative; width:1100px; height:600px; display:none; 
     border: 3px solid #010101;    
 }
-.clip{position:absolute; width:854px; height:480px; top:50%; left:50%; margin-top:-240px; margin-left:-427px;}
-.playbtn{position:absolute; margin:300px auto; margin-left:550px;}
+/*.clip{position:absolute; width:854px; height:480px; top:50%; left:50%; margin-top:-240px; margin-left:-427px;}
+.playbtn{position:absolute; margin:300px auto; margin-left:550px;}*/
 p.exit2{
     position:absolute; width:50px; height:30px; right:20px; bottom:-50px;
     background-color: #010101; border-radius: 10px;
     text-align: center; line-height: 30px;
     color: #fff;
     display: none;
+    cursor: pointer;
+}
+
+/* 방문하기 */
+.visit {
+    display: none;
+}
+.visitGuide-btn {
+    position: absolute; top: 100px; left: 50%;
+    transform: translateX(-50%);
+    width: 70%; height: 64px;
+    cursor: pointer;
+}
+.visitGuide-btn .visitBtn {
+    width: 33%; height: 68px;
+    display: inline-block;
+}
+.visitGuide-btn .visitBtn p {
+    color: white;
+    font-size: 24px; font-weight: bold;
+    text-align: center; line-height: 68px;
+    background-color: #fab51a;
+
+}
+.visitGuide-btn .visitBtn p:hover,
+.visitGuide-btn .visitBtn p.on {
+    background-color: #f08712;    
+}
+.visit .visitGuide-contents div.con {
+    position: absolute; top: 180px; left: 50%;
+    transform: translateX(-50%);
+    width: 70%; height: 68%;
+    background-color: #fff;
+    padding: 44px 44px 0px 44px;
+    text-align: center;
+}
+
+/* 관람요금 */
+.visitGuide-contents .entranceFee-content h1 {
+    color: #010101;
+    margin-bottom: 50px;
+}
+.visitGuide-contents .entranceFee-content div {
+    color: #010101;
+    font-size: 22px;
+}
+.entranceFee-content div.black {
+    width: 300px; height: 49px; line-height: 49px;
+    background-color: #010101;
+    color: white;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.entranceFee-content div.white {
+    width: 300px; height: 49px; line-height: 49px;
+    background-color: lightgray;
+    display: inline-block;
+}
+.entranceFee-content img {
+    position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+}
+
+/* 관람시간 */
+.visitGuide-contents .open-closeTime-content {
+    display: none;
+}
+.visitGuide-contents .open-closeTime-content h1 {
+    color: #010101;
+    margin-bottom: 50px;
+}
+.visitGuide-contents .open-closeTime-content h2 {
+    padding-bottom: 15px;
+}
+.visitGuide-contents .open-closeTime-content p {
+    padding-bottom: 30px;
+}
+.visitGuide-contents .open-closeTime-content p span {
+    color: red;
+}
+
+/* 오시는 길 */
+.visitGuide-contents .directions-content {
+    display: none;
+}
+.visitGuide-contents .directions-content h1 {
+    margin-bottom: 15px;
+}
+.visitGuide-contents .directions-content table {
+    margin: 0 auto;
+    
+}
+
+
+/* exit3 */
+p.exit3 {
+    position: absolute; right: 220px; bottom: 130px;
+    width:50px; height:30px; 
+    background-color: #010101; border-radius: 10px;
+    text-align: center; line-height: 30px;
+    color: #fff;
     cursor: pointer;
 }
