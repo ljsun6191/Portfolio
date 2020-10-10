@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+/* Reset CSS */
+* {margin:0; padding:0; font-family: 'Noto Sans KR', sans-serif; color: #010101; box-sizing: border-box;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, table {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 600;}
+main {display: block;}
+a {color: inherit; text-decoration: inherit;}
+a img {border: none;}
+img {vertical-align: middle;}
+li {list-style: none;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i.fas, i.far, i.fab {vertical-align: middle; display: inline-block;}
+i.fas span, i.far span, i.fab span {position: absolute; overflow: hidden; text-indent: -999px;}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*HOME*/
+.HOME {
+    width: 100vw; height: 100vh;
+}
+.HOME img {
+    width: 100vw; height: 100vh;
+    overflow: hidden;
+    object-fit: cover;
+}
+.HOME p.intro1 {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%);
+    font-size: 44px; font-weight: bold;
+}
+.HOME p.intro2 {
+    position: absolute; top: calc(60%); left: 50%;
+    transform: translate(-50%);
+    font-size: 24px;
+}
+
+/*nav*/
+.nav {
+    position: fixed; top: 50%; right: 55px;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+.nav-home,
+.nav-about,
+.nav-works,
+.nav-contact {
+    width: 22px; height: 22px;
+    border-radius: 22px;
+    background-color: skyblue;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.nav-home:hover,
+.nav-about:hover,
+.nav-works:hover,
+.nav-contact:hover {
+    width: 80px; height: 22px;
+    border-radius: 22px;
+    background-color: skyblue;
+}
+.nav p {
+    color: white;
+    font-weight: bold;
+    position: fixed; right: 18px;
+}
+
+
+/*ABOUT*/
+.ABOUT {
+    width: 100vw; height: 100vh;
+    padding: 50px 250px;
+    background-color: #0c73b8;
+}
+.ABOUT h1 {
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+.ABOUT .profileIMG {
+    position: relative;
+}
+.ABOUT .profileIMG .profile-shadow-box {
+    position: absolute; 
+    width: 236px; height: 315px;
+    background-color: #f2bf26;
+}
+.ABOUT .profileIMG img {
+    position: absolute; top: 25px; left: 25px;
+}
+.ABOUT .profile-Wrap {
+    position: relative;
+}
+.ABOUT .profile-Wrap .profile {
+    position: absolute; top: 25px; left: 360px;
+    width: 800px; height: 670px;
+    background-color: #f2bf26;
+    padding: 25px 50px;
+}
+.ABOUT .profile-Wrap .profile h2 {
+    font-size: 30px; 
+    margin-bottom: 15px;
+    color: #fff;
+}
+.ABOUT .profile-Wrap .profile p {
+    line-height: 1.5;
+}
+.ABOUT .profile-Wrap .profile p.bold {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.ABOUT .profile-Wrap .profile p.company {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.ABOUT .profile-Wrap .profile p.company.c2 {
+    margin-top: 20px;
+}
+
+/*WORKS*/
+.WORKS {
+    width: 100vw; height: 100vh;
+    position: relative;
+}
+.WORKS ul {
+    width: 95%; height: 55px;
+    -webkit-position: sticky;
+    top: 0;
+    padding-left: 5%;
+    line-height: 55px;
+    z-index: 90;
+}
+.WORKS ul li {
+    float: left; padding-right: 35px;
+    cursor: pointer;
+}
+.WROKS ul li.on {
+    /*text-decoration: underline;*/
+}
+.WORKS .work {
+    width: 95%; height: 90%;
+    position: absolute; left: 50%; transform: translate(-50%);
+}
+.WORKS div.page1 {
+    z-index: 10;
+}
+.WORKS .work .workBox {
+    width: 100%; height: 100%;
+    background-color: #eeeeee;
+    padding: 0 250px;
+}
+.WORKS .work .workBox h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+.WORKS .work .workBox h2 {
+    padding: 55px 0 20px 55px;
+}
+.WORKS .work .workBox a div {
+    float: left;
+}
+.WORKS .work img {
+    width: 40vw; height: auto;
+}
+.WORKS .work p.subscribe {
+    width: 25vw; height: auto;
+    padding: 35px 35px;
+    background-color: lightgray;
+}
+.WORKS .work p.click {
+    
+}
+.WORKS .copyright {
+    width: 100vw; height: 45px;
+    background-color: #fff;
+    position: absolute; bottom: 0;
+    line-height: 45px;
+    padding-left: 5%;
+}
+
+/*CONTACT*/
+.CONTACT {
+    width: 100vw; height: 100vh;
+    position: relative;
+    padding-top: 250px;
+    text-align: center;
+}
+.CONTACT .contact-box {
+    background-color: lightgray;
+    width: 600px; height: 400px;
+    position: absolute; left: 50%; transform: translateX(-50%);
+}
+.CONTACT .contact-box p {
+    font-size: 18px;
+    position: absolute; top: 30%; left: 50%; transform: translate(-50%);
+}
+.CONTACT .contact-box p span {
+    font-size: 32px; color: #f2bf26;
+    text-shadow: 1px 1px 1px gray;
+    font-weight: bold;
+}
